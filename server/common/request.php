@@ -1,7 +1,10 @@
 <?php
 /**
+ * Request.php
  * Common function request to request content from the manetheren host
  * Contains service request method wrappers
+ * @author Tanner Hildebrand
+ * @version 1.0
  */
 
 require_once( '../common/common.php' );

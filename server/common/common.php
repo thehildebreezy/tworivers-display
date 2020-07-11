@@ -1,4 +1,8 @@
 <?php
+/**
+ * Provide global variables that define where the services are located on the servers
+ * As well as define where the home address is for the services
+ */
 global $SLIDE_SERVICE;
 $SLIDE_SERVICE = '/services/photos.php';
 global $WEATHER_SERVICE;

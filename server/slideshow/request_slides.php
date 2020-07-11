@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Request_slides.php
+ * Sends a request to either the manetheren service provider or the numenor service provider
+ * Mantheren goes to Numenora s well for photos, so either will return the same
+ */
 require_once( '../common/request.php' );
 require_once( '../common/common.php' );
 

@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Request_forecast.php
+ * Sends a request to the manetheren service provider for forecast data
+ * 
+ */
 require_once( '../common/request.php' );
 require_once( '../common/common.php' );
 

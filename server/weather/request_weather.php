@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Request_weather.php
+ * Sends a request for weather to the manetheren proxy service provider and returns the response
+ */
 require_once( '../common/request.php' );
 require_once( '../common/common.php' );
 
