@@ -76,7 +76,7 @@ Item {
 		var icon = IconMap.mapping[iconid];
 		weatherIcon.source = "source/weather_icons/weather-icons-master/svg/wi-"+icon+".svg";
 		temp.text = k_to_f(response["main"]["temp"])+"\xB0F";
-		desc.text = response["weather"][0]["description"];
+		desc.text = response["name"] + " / " + response["weather"][0]["description"];
 	}
 
 	function k_to_f(K){
