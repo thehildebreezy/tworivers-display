@@ -44,7 +44,7 @@ Item {
 	 */
 	function rotateSlides() {
 		console.log("rotating slides");
-		slideTimer.running = false;
+		// slideTimer.running = false; // keep it running in case of network failure
 		if( currentImg == 1 ){	// if image 1 holds it
 			nextImage(imgTwo);  // load in to 2
 			currentImg = 2;
@@ -65,7 +65,7 @@ Item {
 		imgOne.z = 2;
 		imgTwo.z = 1;
 		imgOneAnimation.start();
-		slideTimer.running=true;	// restart the paused slide timer
+		slideTimer.running=true;	// restart the paused slide timer if it stopped
 	}
 
 	/** 
@@ -79,7 +79,7 @@ Item {
 		imgTwo.z = 2;
 		imgOne.z = 1;
 		imgTwoAnimation.start();
-		slideTimer.running=true;	// restart the paused slide timer
+		slideTimer.running=true;	// restart the paused slide timer if it stopped
 	}
 
 	/**
@@ -147,10 +147,6 @@ Item {
 	 */
 	function loadImgs( data ){
 
-		// when we are updating, we'll pause the slide timer so we don't 
-		// try to change slides in the middle of an update
-		slideTimer.running = false
-
 		// assume success
 		var failed = false;
 
@@ -164,7 +160,7 @@ Item {
 		// if it worked, we'll load the next image
 		nextImage( imgOne );
 
-		// slideTimer.running = true // don't need to run this, imgOneReady will trigger it for us
+		slideTimer.running = true; // make sure we initiate this for first load
 	}
 
 	/**
