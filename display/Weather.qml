@@ -36,6 +36,9 @@ Item {
 			'S','M','T','W','T','F','S'
 		];
 
+		var d = new Date( response['list'][0]['dt_txt'] );
+		
+		var today = d.getDay();
 
 		// select middle of the day
 		// responses are sent in 3 hour blocks
