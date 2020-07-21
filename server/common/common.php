@@ -8,7 +8,7 @@ $SLIDE_SERVICE = '/services/photos.php';
 global $WEATHER_SERVICE;
 $WEATHER_SERVICE = '/services/weather.php';
 global $FORECAST_SERVICE;
-$FORECAST_SERVICE = '/services/forecast.php';
+$FORECAST_SERVICE = '/services/forecast.php?v=0&other=simple';
 global $SETTINGS_SERVICE;
 $SETTINGS_SERVICE = '/services/settings.php';
 global $PHOTOBOOTH_SERVICE;

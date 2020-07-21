@@ -36,33 +36,14 @@ Item {
 			'S','M','T','W','T','F','S'
 		];
 
-		// Generate an idea of what day it is from the first listed
-		// date time text group from the OWM response
-		var d = new Date( response['list'][0]['dt_txt'] );
-		d.setHours(0); // reset to 0 hours (in case middle of the day)
-
-		// figure out what day is first listed (should be today)
-		var today = d.getDay();
-
-		// now find the first item in the forecast that beats this day; i.e, date+1
-		var i=0;
-		var nextDayIndex = 0;
-		for( i=0; i<40; i++ ){
-			var next = new Date( response['list'][i]['dt_txt'] );
-			next.setHours(0);     // reset day to 0 hours like we did to the base date
-			if(next > d){         // found day > today
-				nextDayIndex = i; 
-				break;
-			}
-		}
 
 		// select middle of the day
 		// responses are sent in 3 hour blocks
 		// So to get to noon from midnight, add 4 indexes (4*3 = 12)
 		// to get one day after that, add 8 (8*3 = 24)
-		var objOne = response['list'][nextDayIndex+4];
-		var objTwo = response['list'][nextDayIndex+12];
-		var objThree = response['list'][nextDayIndex+20];
+		var objOne = response['list'][0];
+		var objTwo = response['list'][1];
+		var objThree = response['list'][2];
 
 		// We've pre generated a mapping from the ID to the icon svg name and included it above
 		// just translate the icon ID to the nomenclature and set the source
