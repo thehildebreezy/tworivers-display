@@ -19,6 +19,6 @@ if($val > 100){
 } else {
     $write = 255;
 }
-file_put_contents('/sys/class/backlight/rpi_backlight/brightness', sprintf("%d",$write));
-echo "Brightness set to $write";
+$_GET['level'] = $write;
+require('set.php');
 ?>
