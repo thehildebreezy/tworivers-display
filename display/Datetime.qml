@@ -136,7 +136,7 @@ Item {
 		text: "8"
 
 		// anchored to the left side of the screen
-		anchors.left: parent.left
+		//anchors.left: parent.left
 		// the components bottom aligns with the top of the date field
 		anchors.bottom: dateText.top
 
@@ -158,7 +158,7 @@ Item {
 		// left side aligns tot he right of the hours
 		anchors.left: hourText.right
 		// its bottom aligns to the top of the date
-		anchors.bottom: dateText.top
+		anchors.bottom: hourText.bottom
 
 		// large, bold, and white
 		font.pointSize: textEmph
@@ -174,7 +174,7 @@ Item {
 		// left side against he right side of the separator
 		anchors.left: separatorText.right
 		// bottom against the top of the date
-		anchors.bottom: dateText.top
+		anchors.bottom: hourText.bottom
 
 		// large, bold, and white
 		font.pointSize: textEmph
@@ -188,7 +188,7 @@ Item {
 		text: "Sunday, 29 March, 2020"
 
 		// anchored against the left edge of the screen
-		anchors.left: parent.left
+		// anchors.left: parent.left
 		// anchored with its bottom against the bottom of the screen
 		anchors.bottom: parent.bottom
 

@@ -57,7 +57,7 @@ class Manager(QObject):
     def requestRefresh(self):
         self.weatherUpdate()
         self.forecastUpdate()
-        self.slideshowUpdate(self)
+        self.slideshowUpdate()
         return
 
     ## This slot is invoked if the QML view receives a tap on the screen

@@ -14,7 +14,7 @@ Rectangle {
 
 	// 800x480 hard coded in to match the resolution of my Raspberry Pi 7inch touch screen
 	width:800; height: 480
-	color: "lightgrey"
+	color: "black"
 
 
 	/* SLOTS */
@@ -90,6 +90,7 @@ Rectangle {
 		onTriggered: requestRefresh()
 	}
 
+
 	// invoke the slideshow module to run in the background
 	Slideshow {
 		id: slides
@@ -124,4 +125,9 @@ Rectangle {
 		anchors.rightMargin: 20
 		anchors.bottomMargin: 20
 	}
+
+	// lights out application
+	/*LightsOut {
+		anchors.fill: parent
+	}*/
 }
